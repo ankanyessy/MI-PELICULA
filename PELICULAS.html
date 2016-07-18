@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="UTF-8">
+	  <title>Detalles peliculas</title>
+	  <link rel="stylesheet" href="css/main.css">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+		<header>
+			<div class="container-fluid">
+				<div class="row headerLogo">
+					<div class="col-xs-4 col-sm-4 col-md-4">
+						<div class="logo" id="logo">
+							<img src="./img/logo.jpg">
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 col-md-3">
+						<div class="ingresar" id="ingresar">
+							<button class="open btn btn-warning" id="open"><a href="#">INGRESAR</a></button>
+						</div>
+					</div>
+					<div class="col-xs-5 col-sm-5 col-md-5 search">
+						<form class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+							    <input type="text" class="form-control" placeholder="Search" width="20%">
+							</div>
+							<button type="submit" class="btn btn-default">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<nav class="navbar navbar-default">
+	  				<div class="container-fluid home">
+	    				<!-- Brand and toggle get grouped for better mobile display -->
+	    				<div class="navbar-header">
+	      					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        					<span class="sr-only">Toggle navigation</span>
+	        					<span class="icon-bar"></span>
+	        					<span class="icon-bar"></span>
+	        					<span class="icon-bar"></span>
+	      					</button>
+	      					<a class="navbar-brand active" href="PELICULAS.html">HOME<span class="sr-only">(current)</span></a>
+	    				</div>
+
+					    <!-- Collect the nav links, forms, and other content for toggling -->
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					        <ul class="nav navbar-nav">
+					        	<li class="inicioLista"><a href="#">PROMOCIONES</a></li>
+					        	<li class="dropdown">
+					          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SUCURSALES<span class="caret"></span></a>
+						          	<ul class="dropdown-menu">
+							            <li><a href="#">Sucursal 1</a></li>
+							             <li role="separator" class="divider"></li>
+							            <li><a href="#">Sucursal 2</a></li>
+							             <li role="separator" class="divider"></li>
+							            <li><a href="#">Sucursal 3</a></li>
+							            <li role="separator" class="divider"></li>
+							            <li><a href="#">Sucursal 4</a></li>
+							            <li role="separator" class="divider"></li>
+							            <li><a href="#">Sucursal 5</a></li>
+						          	</ul>
+					        	</li>
+					        	<li class="dropdown">
+					          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SERVICIOS<span class="caret"></span></a>
+						          	<ul class="dropdown-menu">
+							            <li><a href="#">CUMPLEAÑOS</a></li>
+							             <li role="separator" class="divider"></li>
+							            <li><a href="#">CONVENIOS</a></li>
+							             <li role="separator" class="divider"></li>
+							            <li><a href="#">COLEGIOS</a></li>
+						          	</ul>
+					        	</li>
+					        	<li class="dropdown">
+					          		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SALAS<span class="caret"></span></a>
+					          		<ul class="dropdown-menu">
+								        <li><a href="#">3D</a></li>
+								        <li role="separator" class="divider"></li>
+								        <li><a href="#">2D</a></li>
+								       <li role="separator" class="divider"></li>
+								        <li><a href="#">Normal</a></li>
+								    </ul>
+					        	</li>
+					        	<li><a href="#">SOBRE NOSOTROS</a></li>
+					        	<li><a href="#">CONTACTO</a></li>
+					      	</ul>
+					    </div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+		</header>
+
+
+
+		<div class="container-fluid">
+			<div class="row titulo">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<h1 class="cine">CINE MELON</h1>
+				</div>
+			</div>
+			<div class="row categoria">
+				<div class="col-xs-12 col-sm-12 col-md-12 category" id="category">
+					<h3><big>Escoge una categor&iacute;a:</big>
+						<select class="seleccionar2" id="seleccionar2">
+							<option value="todas" class="todas" id="todas" onclick="mostrarTodas()">Todas</option>
+							<option value="infantiles" class="infantiles" id="infantiles" onclick="mostrarInfantiles()">Infantiles</option>
+							<option value="ciencia-ficcion" class="ciencia-Ficcion" id="cienca-ficcion" onclick="mostrarCienciaFiccion()">Ciencia-Ficci&oacute;n</option>
+							<option value="romance" class="romance" id="romance" onclick="mostrarRomance()">Romance</option>
+							<option value="terror" class="terror" id="terror" onclick="mostrarTerror()">Terror</option>
+						</select>
+					</h3>
+				</div>
+			</div>
+		</div>
+	
+			<div class="container-fluid bg-negro">
+				<div class="row imagenes">
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="infantiles" value="infantiles">
+							<h5 class="text-center"><a href="#angel">The Littlest Angel</a></h5>
+							<img src="img/angel.jpg" class="img-responsive height="250" width="190"">
+							<a href="#angel" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="angel" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">The Littlest Angel</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/angel.jpg">
+										<p class="descripcion"><b>SINOPSIS</b><br>
+										Películas para niños a partir de 3 años. Con tan solo cinco años de edad, Little Angel es un niño que ha llegado al cielo antes de tiempo. Quizá por ello encuentra dificultades para adaptarse a su nueva vida. En vez de asistir a las clases de la Academia del Ángel, el pequeño se entretiene persiguiendo mariposas y jugando con su inseparable amigo perruno, A pesar del peligro y de que sabe que está prohibido, el joven decide bajar de nuevo a la tierra en busca de su caja de tesoros que echa mucho de menos. En compañía de su angelical cachorro, el protagonista emprenderá una aventura inolvidable.</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles " id="infantiles" value="infantiles">
+							<h5 class="text-center"><a href="#dory">Buscando a Dori</a></h5>
+							<img src="img/dory.jpg" class="img-responsive" height="250" width="190">
+							<a href="#dory" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="dory" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Buscando a Dori</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/dory.jpg" class="img-responsive">
+										<p><b>SINOPSIS</b><br>Películas para niños a partir de 3 años. Con tan solo cinco años de edad, Little Angel es un niño que ha llegado al cielo antes de tiempo. Quizá por ello encuentra dificultades para adaptarse a su nueva vida. En vez de asistir a las clases de la Academia del Ángel, el pequeño se entretiene persiguiendo mariposas y jugando con su inseparable amigo perruno, A pesar del peligro y de que sabe que está prohibido, el joven decide bajar de nuevo a la tierra en busca de su caja de tesoros que echa mucho de menos. En compañía de su angelical cachorro, el protagonista emprenderá una aventura inolvidable.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="infantiles" value="infantiles">
+							<h5 class="text-center"><a href="#bambi">Bambi</a></h5>
+							<img src="img/bambi.jpg" class="img-responsive" height="250" width="190">
+							<a href="#bambi" data-toggle="modal" class="sinopsis">Ver sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="bambi" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Bambi</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/bambi.jpg">
+										<p><b>SINOPSIS</b><br>Desde su más tierna infancia en Alger, Marie-Pierre solo quiere vestirse con falda y rechaza obstinadamente su nombre de nacimiento: Jean-Pierre. A los 17 años, su vida cambia al descubrir una revista de un cabaret de travestís: El Carrousel de Paris. Con el tiempo, ella se convierte en "Bambi", figura mítica de los cabarets parisinos de los años 50-60. Este testimonio no solo sirve para trazar el destino de una personalidad fuera de común, sino que recogiendo el testimonio de una de las primeras transexuales de Francia, continua el trabajo que ya comenzó con "Les Invisibles". Mediometraje preseleccionado para los César 2014.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="Ciencia-ficcion" value="ciencia-ficcion">
+							<h5 class="text-center"><a href="#galaxia">Guardianes de la Galaxia</a></h5>
+							<img src="img/galaxia.jpg" class="img-responsive" height="250" width="190">
+							<a href="#galaxia" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="galaxia" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title"><a href="#galaxia">Guardianes de la galaxia</a></h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/galaxia.jpg">
+										<p><b>Sinopsis</b><br>El temerario aventurero Peter Quill es objeto de un implacable cazarrecompensas tras robar una misteriosa esfera codiciada por Ronan, un poderoso villano cuya ambición amenaza todo el universo. Para poder escapar del incansable Ronan, Quill se ve obligado a pactar una complicada tregua con un cuartero de disparatados inadaptados: Rocket, un mapache armado con un rifle, Groot, un extraterrestre, criatura con forma de árbol viviente.</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="terror" value="terror">
+							<h5 class="text-center"><a href="#conjuro">El Conjuro 2</a></h5>
+							<img src="img/conjuro2.jpg" class="img-responsive" height="250" width="190">
+							<a href="#conjuro" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="conjuro" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">El Conjuro 2</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/conjuro2.jpg">
+										<p><b>SINOPSIS</b><br>Lorraine y Ed Warren, quienes, en una de sus más aterradoras investigaciones paranormales, viajan al norte de Londres para ayudar a una madre soltera con cuatro hijos que vive en una casa repleta de espíritus malignos.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="terror" value="terror">
+							<h5 class="text-center"><a href="#silenthill">Silent Hill</a></h5>
+							<img src="img/silenthill.jpg" class="img-responsive" height="250" width="190">
+							<a href="#silenthill" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="silenthill" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Silent Hill</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/silenthill.jpg">
+										<p><b>SINOPSIS</b><br>Esta vez, contará la historia de Heather Mason y su padre. Cuando ella cumple los dieciocho años sufrirá terribles pesadillas y tras la desaparición de su padre, Heather descubrirá que no es quién realmente piensa.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="romance" value="romance">
+							<h5 class="text-center"><a href="#viaje">El viaje mas largo</a></h5>
+							<img src="img/elviajemaslargo.jpg" class="img-responsive" height="250" width="190">
+							<a href="#viaje" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="viaje" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">El viaje mas largo</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/elviajemaslargo.jpg">
+										<p><b>SINOPSIS</b><br>El viaje más largo está basada en la novela homónima de Nicholas Sparks y sigue el romance de Luke, un antiguo campeón de rodeo que pretende llegar de nuevo a lo más alto, y Sophia, una universitaria que está a punto de cumplir su sueño profesional: trabajar en una prestigiosa galería de arte de Nueva York. 
+										Su amor se pone a prueba ante la diferente forma de vida que tiene cada uno pero se ven unidos inesperadamente con la aparición de Ira, un anciano que encuentran cuando su coche tiene un accidente. Rescatando una caja con cartas escritas a su antiguo amor, esto inspira profundamente a la pareja.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="Ciencia-ficcion" value="ciencia-ficcion">
+							<h5 class="text-center"><a href="#midnight">Midnight spacial</a></h5>
+							<img src="img/mignight.jpg" class="img-responsive" height="250" width="190">
+							<a href="#midnight" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="midnight" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Midnight spacial</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/mignight.jpg">
+										<p><b>SINOPSIS</b><br>Se centra en un padre y su hijo de ocho años. Ambos se verán obligados a huir cuando el primero descubra que su descendiente posee poderes especiales.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="Ciencia-ficcion" value="ciencia-ficcion">
+							<h5 class="text-center"><a href="#tron">Tron</a></h5>
+							<img src="img/tron.jpg" class="img-responsive" height="250" width="190">
+							<a href="#tron" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="tron" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Tron</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/tron.jpg">
+										<p><b>SINOPSIS</b><br>Sam Flynn (GARRETT HEDLUND), un experto en tecnología de 27 años e hijo de Kevin Flynn (JEFF BRIDGES), investiga la desaparición de su padre y se encuentra metido en el mismo mundo de programas violentos y juegos de lucha donde su padre a estado viviendo los últimos 25 años. Junto a la leal confidente de Kevin, (OLIVIA WILDE), padre e hijo se embarcan en una aventura a vida o muerte a través de un ciber universo visualmente increíble que se ha hecho más avanzado...y mucho más peligroso.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="infantiles" value="infantiles">
+							<h5 class="text-center"><a href="#frozen">Frozen</a></h5>
+							<img src="img/frozen.jpg" class="img-responsive" height="250" width="190">
+							<a href="#frozen" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="frozen" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Frozen</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/frozen.jpg">
+										<p><b>SINOPSIS</b><br>Cuando una profecía condena a un reino a vivir un invierno eterno, la joven Anna, el temerario montañero Kristoff y el reno Sven emprenden un viaje épico en busca de Elsa, hermana de Anna y Reina de las Nieves, para poner fin al gélido hechizo.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="romance" value="romance">
+							<h5 class="text-center"><a href="#lovehonor">Love and Honor</a></h5>
+							<img src="img/loveandhonor.jpg" class="img-responsive" height="250" width="190">
+							<a href="#lovehonor" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="lovehonor" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">Love and Honor</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/loveandhonor.jpg">
+										<p><b>SINOPSIS</b><br>'Love and Honor' narra la apasionante historia de un joven soldado que ayuda a su mejor amigo a volver a conquistar el corazón de su novia, después de un viaje clandestino a casa desde el frente, donde combaten en la guerra de Vietnam durante una época de protesta y revolución social. El soldado entrará entonces en un proceso donde conocerá por primera vez el amor verdadero
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="Ciencia-ficcion" value="ciencia-ficcion">
+							<h5 class="text-center"><a href="#thehost">The Host</a></h5>
+							<img src="img/thehost.jpg" class="img-responsive" height="250" width="190">
+							<a href="#thehost" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="thehost" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">The Host</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/thehost.jpg">
+										<p><b>SINOPSIS</b><br>Nuestro mundo ha sido invadido por un enemigo desconocido. Los seres humanos se han convertido en huéspedes de los invasores, que se han apoderado de sus mentes manteniendo el cuerpo intacto. Casi toda la humanidad ha sucumbido a esta invasión. Cuando Melanie (Saoirse Ronan), uno de los pocos humanos «salvajes» que quedan, se ve capturada, está convencida de que ha llegado su fin. Wanderer, el «alma» invasora asignada al cuerpo de Melanie, ya está avisada de las dificultades que implica vivir dentro de un ser humano: las emociones irrefrenables, el torrente de sensaciones, los recuerdos demasiado vívidos...Pero hay algo con lo que Wanderer no contaba: la antigua inquilina de su cuerpo se niega a cederle el control de su mente.Cuando unas fuerzas externas obligan a Wanderer y a Melanie a aliarse, ambas emprenden una incierta y peligrosa búsqueda del hombre al que aman.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-6 col-sm-6 col-md-2 recuadros">
+						<div class="Detalles" id="Ciencia-ficcion" value="ciencia-ficcion">
+							<h5 class="text-center"><a href="#matanza">La Matanza en Texas</a></h5>
+							<img src="img/matanza.jpg" class="img-responsive" height="250" width="190">
+							<a href="#matanza" data-toggle="modal" class="sinopsis">Ver Sinopsis Pel&iacute;cula</a>
+						</div>
+						<div id="matanza" class="modal fade">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+										<h3 class="modal-title">La Matanza en Texas</h3>
+									</div>
+									<div class="modal-body">
+										<img src="img/matanza.jpg">
+										<p><b>SINOPSIS</b><br>Sally y su hermano Franklin viajan, junto a otros amigos, al cementerio donde yace el abuelo de ambos. Tras ello, el grupo se dirige a una vieja granja. En el camino, recogen a un extraño autoestopista, al que deben echar del coche cuando éste ataca a Frank. Finalmente, llegan a la granja. Buscando algún sitio donde bañarse, dos de los chicos entran en una casa, que desgraciadamente es el hogar del autoestopista y el resto de su familia, todos caníbales.
+										</p>
+									</div>
+									<div class="modal-footer"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+</html>
